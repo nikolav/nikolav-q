@@ -10,6 +10,16 @@ const ready = require("./src/ready");
 const type = require("./src/type");
 const e = require("./src/e");
 
+// import classes module
+const classadd = require("./src/classes/add");
+const classremove = require("./src/classes/rm");
+const classtoggle = require("./src/classes/toggle");
+const classlist = require("./src/classes/ls");
+const classhas = require("./src/classes/has");
+const classcount = require("./src/classes/len");
+const classtostring = require("./src/classes/string");
+const classeach = require("./src/classes/each");
+
 module.exports = init_(qsa_, {
   s,
   id,
@@ -17,7 +27,16 @@ module.exports = init_(qsa_, {
   off,
   ready,
   e,
-  class: {},
+  class: {
+    add: classadd,
+    rm: classremove,
+    toggle: classtoggle,
+    ls: classlist,
+    has: classhas,
+    len: classcount,
+    string: classtostring,
+    each: classeach,
+  },
   to: {
     array: slice_,
   },

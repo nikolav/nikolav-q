@@ -1,14 +1,13 @@
 const doc = require("./doc_");
 const vars_ = require("./vars_");
-const noop = require("./noop");
+const Event_ = require("./event_");
 
 const DOMContentLoaded = vars_.events.dom.ready;
 
-const Evt = typeof Event !== "undefined" ? Event : noop;
 
 module.exports = new Promise((resolve, reject) => {
   if ("complete" === doc.readyState) {
-    resolve(new Evt(DOMContentLoaded));
+    resolve(new Event_(DOMContentLoaded));
   } else {
     doc.addEventListener(DOMContentLoaded, ready_);
   }

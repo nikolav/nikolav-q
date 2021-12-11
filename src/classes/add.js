@@ -1,3 +1,3 @@
-module.exports = (node, className) => {
-  return node.classList.add(className);
+module.exports = (node, ...classes) => {
+  return node.classList.add(...classes);
 };

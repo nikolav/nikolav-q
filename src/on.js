@@ -1,14 +1,14 @@
 module.exports = (config) => {
-  // config: {target:'element', type|on:'event', callback|run: 'function', useCapture|capture: 'boolean'}
+  // config: {target:'element', type|on:'event', callback|run: 'function', useCapture|capture|options: boolean|object}
   // q.on({
   //     target             : 'element',
   //     type|on            : 'click',
   //     callback|run       : (evt) => {},
-  //     useCapture|capture : false,
+  //     options            : boolean|object
   // });
   return config.target.addEventListener(
     config.type || config.on || "click",
     config.callback || config.run,
-    config.useCapture || config.capture || false
+    config.options || config.useCapture || config.capture || false
   );
 };

@@ -2,7 +2,8 @@ const init_ = require("./init_");
 const type = Function.prototype.call.bind(Object.prototype.toString);
 
 init_(type, {
-  object: type(Object.prototype),
+  object: type(Object.prototype), 
+  string: type(String.prototype),
 });
 
 module.exports = type;

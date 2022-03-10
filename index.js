@@ -21,6 +21,9 @@ const classcount = require("./src/classes/len");
 const classtostring = require("./src/classes/string");
 const classeach = require("./src/classes/each");
 
+// functions
+const debounce = require("./src/func/debounce");
+
 module.exports = init_(qsa_, {
   s,
   id,
@@ -40,6 +43,9 @@ module.exports = init_(qsa_, {
   },
   to: {
     array: slice_,
+  },
+  func: {
+    debounce,
   },
   type,
   text,

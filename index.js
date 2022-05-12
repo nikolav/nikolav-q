@@ -65,6 +65,7 @@ module.exports = init_(qsa_, {
   },
   object: {
     has,
+    paste: init_,
   },
   array: {
     rand,

@@ -10,7 +10,9 @@ const ready = require("./src/ready");
 const type = require("./src/type");
 const e = require("./src/e");
 const text = require("./src/text_");
-
+const prevent = require("./src/prevent");
+const imgPreload = require("./src/img-preload");
+//
 // import classes module
 const classadd = require("./src/classes/add");
 const classremove = require("./src/classes/rm");
@@ -22,8 +24,19 @@ const classtostring = require("./src/classes/string");
 const classeach = require("./src/classes/each");
 
 // functions
-const debounce = require("./src/func/debounce");
+const { debounce, noop } = require("./src/func");
 
+// objects
+const { has } = require("./src/object");
+
+// test
+const { isEmail } = require("./src/test");
+
+// array
+const { rand } = require("./src/array");
+
+//
+//
 module.exports = init_(qsa_, {
   s,
   id,
@@ -31,6 +44,8 @@ module.exports = init_(qsa_, {
   off,
   ready,
   e,
+  prevent,
+  imgPreload,
   class: {
     add: classadd,
     rm: classremove,
@@ -45,8 +60,18 @@ module.exports = init_(qsa_, {
     array: slice_,
   },
   func: {
+    noop,
     debounce,
+  },
+  object: {
+    has,
+  },
+  array: {
+    rand,
   },
   type,
   text,
+  test: {
+    isEmail,
+  },
 });

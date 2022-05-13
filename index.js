@@ -11,7 +11,7 @@ const type = require("./src/type");
 const e = require("./src/e");
 const text = require("./src/text_");
 const prevent = require("./src/prevent");
-const imgPreload = require("./src/img-preload");
+const preload = require("./src/preload");
 //
 // import classes module
 const classadd = require("./src/classes/add");
@@ -45,7 +45,7 @@ module.exports = init_(qsa_, {
   ready,
   e,
   prevent,
-  imgPreload,
+  preload,
   class: {
     add: classadd,
     rm: classremove,

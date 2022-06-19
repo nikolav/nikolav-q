@@ -13,6 +13,9 @@ const text = require("./src/text_");
 const prevent = require("./src/prevent");
 const preload = require("./src/preload");
 //
+const arrayDivide = require("./src/array/divide");
+const sortByTimestampDesc = require("./src/object/sortByTimestampDesc");
+//
 // import classes module
 const classadd = require("./src/classes/add");
 const classremove = require("./src/classes/rm");
@@ -34,6 +37,9 @@ const { isEmail } = require("./src/test");
 
 // array
 const { rand } = require("./src/array");
+
+// str
+const stripEndSlashes = require("./src/str/stripEndSlashes");
 
 //
 //
@@ -69,10 +75,15 @@ module.exports = init_(qsa_, {
   },
   array: {
     rand,
+    divide: arrayDivide,
+    sortByTimestampDesc,
   },
   type,
   text,
   test: {
     isEmail,
+  },
+  str: {
+    stripEndSlashes,
   },
 });

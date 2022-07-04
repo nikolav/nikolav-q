@@ -33,7 +33,7 @@ const { debounce, noop } = require("./src/func");
 const { has } = require("./src/object");
 
 // test
-const { isEmail } = require("./src/test");
+const { isEmail, isString } = require("./src/test");
 
 // array
 const { rand } = require("./src/array");
@@ -82,6 +82,7 @@ module.exports = init_(qsa_, {
   text,
   test: {
     isEmail,
+    isString,
   },
   str: {
     stripEndSlashes,

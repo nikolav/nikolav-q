@@ -3,7 +3,7 @@ const type = Function.prototype.call.bind(Object.prototype.toString);
 
 init_(type, {
   object: type(Object.prototype), 
-  string: type(String.prototype),
+  string: type("."),
 });
 
 module.exports = type;

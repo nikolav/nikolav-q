@@ -42,6 +42,8 @@ const { rand } = require("./src/array");
 const stripEndSlashes = require("./src/str/stripEndSlashes");
 
 //
+const { eventListener } = require("./src/event-listener");
+//
 //
 module.exports = init_(qsa_, {
   s,
@@ -50,6 +52,7 @@ module.exports = init_(qsa_, {
   off,
   ready,
   e,
+  eventListener,
   prevent,
   preload,
   class: {

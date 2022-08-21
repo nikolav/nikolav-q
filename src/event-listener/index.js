@@ -4,7 +4,7 @@ const paste = require("../init_");
 const DEFAULT_EVENTS_CONFIG = { one: false };
 //
 const eventListener = (node = {}, config = {}) => {
-  const e = {};
+  let e = {};
   config = { ...DEFAULT_EVENTS_CONFIG, ...config };
 
   return paste(node, {

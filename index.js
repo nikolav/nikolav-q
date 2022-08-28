@@ -25,6 +25,8 @@ const classhas = require("./src/classes/has");
 const classcount = require("./src/classes/len");
 const classtostring = require("./src/classes/string");
 const classeach = require("./src/classes/each");
+//
+const idGen = require("./src/id-gen");
 
 // functions
 const { debounce, noop } = require("./src/func");
@@ -55,6 +57,7 @@ module.exports = init_(qsa_, {
   eventListener,
   prevent,
   preload,
+  idGen,
   class: {
     add: classadd,
     rm: classremove,
